@@ -16,7 +16,7 @@
 
 
 
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-primary">
 <div class="container d-flex justify-content-between align-items-center">
 
     <a class="navbar-brand align-self-center" href="">
@@ -41,7 +41,7 @@
     <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarReserva">
         Cadastrar reserva
     </a>
-    <a class="navbar-brand align-self-center" href="/consultarPublicacoes">
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarPublicacoes">
         Consultar publicações
     </a>
     <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarPublicacao">
@@ -77,5 +77,32 @@
 </div>
 </nav>
 
+
+
 <router-outlet></router-outlet>
+
+<!-- Background image -->
+<div
+  class="bg-image d-flex justify-content-center align-items-center"
+  style="
+    background-image: url('https://avatars.mds.yandex.net/i?id=845a5b08617e0888071ec6e3919fdc2e-5177926-images-thumbs&n=13');
+    
+    height: 100vh;
+  "
+>
+<!-- Jumbotron -->
+<div
+  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+  style="background-image: url('https://browsecat.net/sites/default/files/high-resolution-empty-room-background-127979-298482-5449082.png');"
+>
+  <h1 class="mb-3 h2">Necessário login para executar as funcionalidades</h1>
+
+  <p>
+   Dados do gerente: <br>
+   email: gerente@email <br>
+   senha: gerente <br>
+  </p>
+</div>
+</div>
+<!-- Background image -->
 

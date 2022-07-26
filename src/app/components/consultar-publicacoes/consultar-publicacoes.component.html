@@ -1,42 +1,46 @@
-<div class="list row">
-    <div class="col-md-6">
-      <h4>Lista de publicações</h4>
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          *ngFor="let publicacao of publicacoes; let i = index"
-          [class.active]="i == indexAtual"
-          (click)="setPublicacaoAtual(publicacao, i)"
-        >
-          {{ publicacao.titulo }}
-        </li>
-      </ul>
-  
+<section class="vh-100 wc-bg">
+    <div class="container h-100 wc-bg">
+        <div class="list row">
+            <div class="col-md-6">
+              <h4>Lista de publicações</h4>
+              <ul class="list-group">
+                <li
+                  class="list-group-item"
+                  *ngFor="let publicacao of publicacoes; let i = index"
+                  [class.active]="i == indexAtual"
+                  (click)="setPublicacaoAtual(publicacao, i)"
+                >
+                  {{ publicacao.titulo }}
+                </li>
+              </ul>
+          
+            </div>
+            <div class="col-md-6">
+              <div *ngIf="publicacaoAtual">
+                <h4>Publicação</h4>
+                <div>
+                  <label><strong>Título:</strong></label> {{ publicacaoAtual.titulo }}
+                </div>
+                <div>
+                    <label><strong>Isbn:</strong></label>
+                    {{ publicacaoAtual.isbn }}
+                </div>
+                <div>
+                    <label><strong>Autor:</strong></label>
+                    {{ publicacaoAtual.autor }}
+                </div>
+                <div>
+                    <label><strong>Editora:</strong></label>
+                    {{ publicacaoAtual.editora }}
+                </div>
+              </div>
+          
+              <div *ngIf="!publicacaoAtual">
+                <br />
+                <p>Clique em uma publicação...</p>
+              </div>
+            </div>
+          </div>
+        
     </div>
-    <div class="col-md-6">
-      <div *ngIf="publicacaoAtual">
-        <h4>Publicação</h4>
-        <div>
-          <label><strong>Título:</strong></label> {{ publicacaoAtual.titulo }}
-        </div>
-        <div>
-            <label><strong>Isbn:</strong></label>
-            {{ publicacaoAtual.isbn }}
-        </div>
-        <div>
-            <label><strong>Autor:</strong></label>
-            {{ publicacaoAtual.autor }}
-        </div>
-        <div>
-            <label><strong>Editora:</strong></label>
-            {{ publicacaoAtual.editora }}
-        </div>
-      </div>
-  
-      <div *ngIf="!publicacaoAtual">
-        <br />
-        <p>Clique em uma publicação...</p>
-      </div>
-    </div>
-  </div>
-  
+  </section>
