@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wine Club</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+</head>
+
+
+
+<nav class="navbar navbar-dark bg-dark">
+<div class="container d-flex justify-content-between align-items-center">
+
+    <a class="navbar-brand align-self-center" href="">
+        Home
+    </a>
+
+    <a *ngIf="funcao && funcao === 'gerente'" class="navbar-brand align-self-center" href="/criarFuncionario">
+        Criar funcionário
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/criarAssociado">
+        Criar associado
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarPublicacao">
+        Cadastrar Publicacao
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarExemplar">
+        Cadastrar Exemplar
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarPublicacao">
+        Consultar exemplares de publicação
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarExemplaresDisponiveis">
+        Consultar exemplares disponíveis
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarEmprestimo">
+        Cadastrar empréstimo
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/devolverLivro">
+        Devolver livro
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarAtrasados">
+        Consultar empréstimos atrasados
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarReserva">
+        Cadastrar reserva
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarReservas">
+        Consultar reservas
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/anularReserva">
+        Anular reserva
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarAssociados">
+        Consultar associados
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarPublicacoes">
+        Consultar publicações
+    </a>
+    <div *ngIf="!userId" class="d-flex navbar-brand align-self-center mx-4 mb-3 mb-lg-4">
+        <a class="btn btn-dark" href="/login">Login</a>
+    </div>
+    
+    <div *ngIf="userId" class="d-flex navbar-brand h1 mx-4 mb-3 mb-lg-4 align-self-center ">
+        <a class="btn btn-primary btn-lg" href="/profile">Olá, {{name}}</a>
+        <a class="btn btn-primary btn-lg" href="/logout">Log out</a>
+    </div>
+
+</div>
+</nav>
+
+<router-outlet></router-outlet>
+
