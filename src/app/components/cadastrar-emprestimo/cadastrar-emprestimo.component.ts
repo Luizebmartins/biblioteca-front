@@ -50,6 +50,7 @@ export class CadastrarEmprestimoComponent implements OnInit {
       this.apiService.cadastrarEmprestimo(this.emprestimoForm.value).subscribe(
         (res: any) => {
           if (res) {
+            console.log(res)
             window.alert('Cadastro realizado com sucesso!');
             console.log('Emprestimo criado com sucesso!');
             this.router.navigate([''])
@@ -58,7 +59,7 @@ export class CadastrarEmprestimoComponent implements OnInit {
             window.alert('Erro ao cadastrar emprestimo! Tente novamente.');
           }
         }, (error) => {
-          console.log(error);
+          window.alert('Alguem na frente!');
         });
     }
   }

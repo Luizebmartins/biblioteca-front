@@ -35,35 +35,35 @@
     <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarExemplar">
         Cadastrar Exemplar
     </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarEmprestimo">
+        Cadastrar empréstimo
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarReserva">
+        Cadastrar reserva
+    </a>
+    <a class="navbar-brand align-self-center" href="/consultarPublicacoes">
+        Consultar publicações
+    </a>
     <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarPublicacao">
         Consultar exemplares de publicação
     </a>
     <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarExemplaresDisponiveis">
         Consultar exemplares disponíveis
     </a>
-    <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarEmprestimo">
-        Cadastrar empréstimo
-    </a>
-    <a *ngIf="userId" class="navbar-brand align-self-center" href="/devolverLivro">
-        Devolver livro
-    </a>
     <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarAtrasados">
         Consultar empréstimos atrasados
-    </a>
-    <a *ngIf="userId" class="navbar-brand align-self-center" href="/cadastrarReserva">
-        Cadastrar reserva
     </a>
     <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarReservas">
         Consultar reservas
     </a>
-    <a *ngIf="userId" class="navbar-brand align-self-center" href="/anularReserva">
-        Anular reserva
-    </a>
     <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarAssociados">
         Consultar associados
     </a>
-    <a *ngIf="userId" class="navbar-brand align-self-center" href="/consultarPublicacoes">
-        Consultar publicações
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/devolverLivro">
+        Devolver livro
+    </a>
+    <a *ngIf="userId" class="navbar-brand align-self-center" href="/anularReserva">
+        Anular reserva
     </a>
     <div *ngIf="!userId" class="d-flex navbar-brand align-self-center mx-4 mb-3 mb-lg-4">
         <a class="btn btn-dark" href="/login">Login</a>

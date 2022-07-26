@@ -61,7 +61,7 @@ export class CriarReservaComponent implements OnInit {
             window.alert('Erro ao criar reserva! Tente novamente.');
           }
         }, (error) => {
-          console.log(error);
+          window.alert('Ainda existe exemplar disponível.');
         });
     }
   }
